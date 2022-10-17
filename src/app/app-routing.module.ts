@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './components';
 import { EditEducacionComponent } from './components/article/educacion/edit-educacion.component';
-import { NewEducacionComponent } from './components/article/educacion/new-educacion.component';
 import { EditExperienciaComponent } from './components/article/experiencia/edit-experiencia.component';
-import { NewExperienciaComponent } from './components/article/experiencia/new-experiencia.component';
 import { EditHabilidadComponent } from './components/article/habilidades/edit-habilidad.component';
 import { HomeComponent } from './components/home/home.component';
 
