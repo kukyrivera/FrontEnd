@@ -1,0 +1,13 @@
+.container{
+    background-color: black;
+    margin-top: 10%;
+    color:aliceblue;
+}
+
+form{
+    padding: 2%;
+}
+
+label, textarea{
+    margin-bottom: -1%;
+}

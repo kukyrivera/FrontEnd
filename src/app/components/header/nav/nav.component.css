@@ -1,0 +1,79 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(40, 125, 153)
+}
+
+.logoAP img{
+    width: 150px;
+}
+
+button{
+    margin-left: 20px;
+}
+
+.redes img{
+    width: 40px;
+    margin: 3px;
+}
+
+@media (max-width: 950px){
+    .logoAP img{
+        max-width: 130px;
+    }
+
+    button{
+        margin-left: 15px;
+        width: 5em;
+        font-size: medium;
+    }
+
+    .redes img{
+        max-width: 30px;
+        margin: 3px;
+    }
+}
+
+@media (max-width: 575px){
+    .logoAP img{
+        max-width: 100px;
+    }
+
+    button{
+        margin-left: 12px;
+        width: 5em;
+        font-size: small;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .redes{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .redes img{
+        max-width: 25px;
+        margin: 2px;
+    }
+}
+
+@media (max-width: 280px){
+    .logoAP img{
+        max-width: 80px;
+    }
+
+    button{
+        margin-left: 10px;
+        width: 5em;
+        font-size: smaller;
+    }
+
+    .redes img{
+        max-width: 20px;
+    }
+}

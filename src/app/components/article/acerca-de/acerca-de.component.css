@@ -1,0 +1,32 @@
+.row{
+    text-align: center;
+}
+
+@media (min-width: 576px){
+    #fotoPerfil{
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        position: relative;
+        top: -80px;
+        left: 30px;
+    }
+
+    #nombre{
+        margin-top: 30%;
+    }
+}
+
+@media (max-width: 575px){
+    #fotoPerfil{
+        position: relative;
+        width: 40%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        top: -60px;
+        margin-bottom: -30px;
+    }
+}
+
+#nombre{
+    font-weight: bold;
+}

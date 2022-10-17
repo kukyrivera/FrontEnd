@@ -1,0 +1,22 @@
+h1, h2, p{
+    display: inline;
+    color: aliceblue;
+}
+
+.titulo{
+    margin-right: 25px;
+}
+
+.row{
+    margin-top: 20px;
+    border-bottom: 0pt;
+    border-left: 0pt;
+    border-right: 0pt;
+    border-color: aliceblue;
+    border-style: inset;
+}
+
+.headerProy{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

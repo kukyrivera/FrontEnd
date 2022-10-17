@@ -1,0 +1,11 @@
+.container{
+    background-color: rgb(40, 125, 153);
+    padding: 5px;
+}
+
+footer{
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

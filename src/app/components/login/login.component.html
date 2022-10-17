@@ -1,0 +1,17 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="../../../../assets/user.png" id="icon" alt="User Icon" />
+        </div>
+
+        <!-- Login Form -->
+        <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+            <input type="text" id="nombreUsuario" class="fadeIn second form-control form-control-lg" name="nombreUsuario" placeholder="Usuario" [(ngModel)]="nombreUsuario" required>
+            <input type="password" id="password" class="fadeIn third form-control form-control-lg" name="password" placeholder="Contraseña" [(ngModel)]="password" required>
+            <input type="submit" class="fadeIn fourth" value="Iniciar Sesión">
+        </form>
+    </div>
+</div>

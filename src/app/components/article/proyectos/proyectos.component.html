@@ -1,0 +1,39 @@
+<div class="row">
+
+    <div class="col-lg-12 headerProy">
+        <h1 class="titulo">Proyectos</h1>
+        <button type="button" title="Agregar" class="btn btn-success" (click)="open(agregarProy)" *ngIf="isLogged">
+            <i class="bi bi-plus"></i>
+        </button>
+
+        <ng-template #agregarProy let-modal>
+            <app-new-proyecto></app-new-proyecto>
+        </ng-template>
+    </div>
+
+    <div class="col-lg-12">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Proyecto of proy">
+                    <td>
+                        <h2>{{Proyecto.nombreProy}}</h2>
+                    </td>
+                    <td>
+                        <p>{{Proyecto.descripcionProy}}</p>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-info" title="Editar" routerLink="/editproy/{{Proyecto.id}}">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" title="Borrar" (click)="delete(Proyecto.id)">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

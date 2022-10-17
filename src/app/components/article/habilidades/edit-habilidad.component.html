@@ -1,0 +1,22 @@
+<div class="container" *ngIf="hab">
+    <div class="row">
+        <div>
+            <div class="headerEdit text-center">
+                <h1>Editar Habilidad</h1>
+            </div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreHab"><h2>Nombre de la habilidad</h2></label>
+                    <input type="text" class="form-control" id="nombreHab" name="nombreHab" [(ngModel)]="hab.nombreHab" required>
+                </div>
+                <div class="form-group">
+                    <label for="porcentajeHab"><h2>Porcentaje de la habilidad</h2></label>
+                    <input type="number" class="form-control" id="porcentajeHab" name="porcentajeHab" [(ngModel)]="hab.porcentajeHab" required>
+                </div>
+                <button class="btn btn-primary">
+                    Guardar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
