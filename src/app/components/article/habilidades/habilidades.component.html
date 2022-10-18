@@ -31,11 +31,13 @@
             [lazy]="true"
         ></circle-progress>
 
-        <button class="btn btn-info" title="Editar" routerLink="/edithab/{{Habilidad.id}}" *ngIf="isLogged">
-            <i class="bi bi-pencil-square"></i>
-        </button>
-        <button class="btn btn-danger" title="Borrar" (click)="delete(Habilidad.id)" *ngIf="isLogged">
-            <i class="bi bi-trash"></i>
-        </button>
+        <div>
+            <button class="btn btn-info" title="Editar" routerLink="/edithab/{{Habilidad.id}}" *ngIf="isLogged">
+                <i class="bi bi-pencil-square"></i>
+            </button>
+            <button class="btn btn-danger" title="Borrar" (click)="delete(Habilidad.id)" *ngIf="isLogged">
+                <i class="bi bi-trash"></i>
+            </button>
+        </div>
     </div>
 </div>

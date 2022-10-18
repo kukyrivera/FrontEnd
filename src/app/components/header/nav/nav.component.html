@@ -1,26 +1,24 @@
 <nav>
     <div class="row">
-        <div class="container">
-            <div class="logoAP">
-                <img src="../../../assets/AP.png" alt="Argentina Programa" id="imgAP">
-            </div>
-            <div class="redes">
-                <a href=""><img src="../../../assets/facebook.png" alt="Facebook" id="imgFB" title="Facebook"></a>
-                <a href=""><img src="../../../assets/instagram.png" alt="Instagram" id="imgIG" title="Instagram"></a>
-                <a href=""><img src="../../../assets/github.png" alt="GitHub" id="imgGit" title="GitHub"></a>
-                <a href=""><img src="../../../assets/linkedin.png" alt="LinkedIn" id="imgLinkedIn" title="LinkedIn"></a>
-                <a href=""><img src="../../../assets/twitter.png" alt="Twitter" id="imgTwitter" title="Twitter"></a>
-                <a href=""><img src="../../../assets/youtube.png" alt="Youtube" id="imgYT" title="YouTube"></a>
-                
-                <!-- Login -->
-                <button type="button" class="btn btn-outline-light" (click)="open(login)" *ngIf="!isLogged">Ingresar</button>
-                <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
-                
-                <ng-template #login let-modal>
-                  <app-login></app-login>
-                </ng-template>
+        <div class="logoAP col-xs-12 col-sm-1 col-md-1 col-lg-1">
+            <img src="../../../assets/AP.png" alt="Argentina Programa" id="imgAP">
+        </div>
+        <div class="redes col-xs-12 col-sm-11 col-md-11 col-lg-11">
+            <a href="https://www.facebook.com/luciano.rivera.31542" target="_blank"><img src="../../../assets/facebook.png" alt="Facebook" id="imgFB" title="Facebook"></a>
+            <a href="https://www.instagram.com/kuky.rivera91" target="_blank"><img src="../../../assets/instagram.png" alt="Instagram" id="imgIG" title="Instagram"></a>
+            <a href="https://github.com/kukyrivera" target="_blank"><img src="../../../assets/github.png" alt="GitHub" id="imgGit" title="GitHub"></a>
+            <a href="https://www.linkedin.com/in/luciano-rivera-015542220" target="_blank"><img src="../../../assets/linkedin.png" alt="LinkedIn" id="imgLinkedIn" title="LinkedIn"></a>
+            <a href="https://twitter.com/kuky_rivera91" target="_blank"><img src="../../../assets/twitter.png" alt="Twitter" id="imgTwitter" title="Twitter"></a>
+            <a href="https://www.youtube.com/channel/UCFntXe-OhXpgI2IiDm-A5aQ" target="_blank"><img src="../../../assets/youtube.png" alt="Youtube" id="imgYT" title="YouTube"></a>
+            
+            <!-- Login -->
+            <button type="button" class="btn btn-outline-light" (click)="open(login)" *ngIf="!isLogged">Ingresar</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
+            
+            <ng-template #login let-modal>
+              <app-login></app-login>
+            </ng-template>
 
-            </div>
         </div>
     </div>
 </nav>

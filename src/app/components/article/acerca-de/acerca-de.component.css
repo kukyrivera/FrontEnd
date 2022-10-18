@@ -2,31 +2,47 @@
     text-align: center;
 }
 
-@media (min-width: 576px){
-    #fotoPerfil{
-        border-radius: 100%;
-        box-shadow: 3px 3px 3px grey;
-        position: relative;
-        top: -80px;
-        left: 30px;
-    }
-
-    #nombre{
-        margin-top: 30%;
-    }
+.cuadroFoto{
+    top: -100px;
 }
 
-@media (max-width: 575px){
-    #fotoPerfil{
-        position: relative;
-        width: 40%;
+#fotoPerfil{
         border-radius: 100%;
-        box-shadow: 3px 3px 3px grey;
-        top: -60px;
-        margin-bottom: -30px;
-    }
+        left: 15px;
+}
+
+.nombre {
+    margin-top: 50px;
 }
 
 #nombre{
     font-weight: bold;
+}
+
+#especialidad{
+    font-style: italic;
+}
+
+.descripcion {
+    margin-top: 20px;
+}
+
+@media (max-width: 992px){
+    .cuadroFoto{
+        top: -100px;
+    }
+
+    #fotoPerfil{
+        border-radius: 100%;
+        margin-bottom: -100px;
+        width: 200px;
+    }
+
+    .nombre {
+        margin-top: 35px;
+    }
+
+    .descripcion {
+        margin-top: 0px;
+    }
 }

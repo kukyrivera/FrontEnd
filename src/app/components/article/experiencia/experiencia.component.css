@@ -20,3 +20,8 @@ h1, h2, p{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+table{
+    border: 0px;
+    border-color: black;
+}
