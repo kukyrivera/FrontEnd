@@ -1,6 +1,9 @@
 <div class="row">
+    <button class="btn btn-info" title="Editar" routerLink="/editacercade/1" *ngIf="isLogged">
+        <i class="bi bi-pencil-square">Editar Persona</i>
+    </button>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 cuadroFoto">
-        <img src="../../../../assets/fotoPerfil.png" id="fotoPerfil" alt="Luciano Rivera">
+        <img src={{persona.img}} id="fotoPerfil" alt="Luciano Rivera">
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 nombre">
         <h1 id="nombre">{{persona.nombre}} {{persona.apellido}}</h1>
@@ -9,7 +12,7 @@
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 descripcion">
         <span>
             <h1 class="tituloDesc">Acerca de mí:</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quidem provident velit iure mollitia laborum cupiditate, sunt laboriosam quia id eum maiores eaque explicabo commodi, error illum vero quod quo!</p>
+            <p>{{persona.descripcion}}</p>
         </span>
     </div>
 </div>

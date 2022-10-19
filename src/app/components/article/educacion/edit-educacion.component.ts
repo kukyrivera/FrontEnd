@@ -11,10 +11,10 @@ import { EducacionService } from 'src/app/service/educacion.service';
 export class EditEducacionComponent implements OnInit {
   educacion: Educacion = null;
 
-  constructor(private sEducacion: EducacionService, private activatedRouter: ActivatedRoute, private router: Router) { }
+  constructor(private sEducacion: EducacionService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
+    const id = this.activatedRoute.snapshot.params['id'];
     this.sEducacion.detail(id).subscribe(
       data => {
         this.educacion = data;
@@ -26,7 +26,7 @@ export class EditEducacionComponent implements OnInit {
   }
 
   onUpdate(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
+    const id = this.activatedRoute.snapshot.params['id'];
     this.sEducacion.update(id, this.educacion).subscribe(
       data => {
         this.router.navigate(['']);
