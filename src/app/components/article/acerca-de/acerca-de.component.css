@@ -1,48 +1,38 @@
 .row{
     text-align: center;
 }
-
-.cuadroFoto{
-    top: -100px;
-}
-
 #fotoPerfil{
-        border-radius: 100%;
-        left: 15px;
+    border-radius: 100%;
 }
-
-.nombre {
-    margin-top: 50px;
-}
-
 #nombre{
     font-weight: bold;
 }
-
 #especialidad{
     font-style: italic;
 }
 
-.descripcion {
-    margin-top: 20px;
+@media (min-width: 992px){
+    #fotoPerfil{
+        position: absolute;
+        left: 40px;
+        top: -120px;
+    }
+    .nombre {
+        margin-top: 90px;
+    }
+    .descripcion {
+        margin-top: 10px;
+    }
 }
 
-@media (max-width: 992px){
-    .cuadroFoto{
-        top: -100px;
+@media (max-width: 991px){
+    .contenido{
+        margin-top: -100px;
     }
-
-    #fotoPerfil{
-        border-radius: 100%;
-        margin-bottom: -100px;
-        width: 200px;
-    }
-
     .nombre {
-        margin-top: 35px;
+        margin-top: 10px;
     }
-
     .descripcion {
-        margin-top: 0px;
+        margin-top: 30px;
     }
 }

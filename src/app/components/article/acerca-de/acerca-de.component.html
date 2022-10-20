@@ -1,18 +1,24 @@
-<div class="row">
-    <button class="btn btn-info" title="Editar" routerLink="/editacercade/1" *ngIf="isLogged">
-        <i class="bi bi-pencil-square">Editar Persona</i>
-    </button>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 cuadroFoto">
-        <img src="../../../../assets/fotoPerfil.png" id="fotoPerfil" alt="Luciano Rivera">
+    <div class="row contenido">
+        <button class="btn btn-info" title="Editar" routerLink="/editacercade/1" *ngIf="isLogged">
+            <i class="bi bi-pencil-square">Editar Persona</i>
+        </button>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 imgynombre">
+            <div class="imgPerfil">
+                <img src="../../../../assets/fotoPerfil.png" id="fotoPerfil" alt="Luciano Rivera">
+            </div>
+            
+
+            <div class="nombre">
+                <h1 id="nombre">{{persona.nombre}} {{persona.apellido}}</h1>
+            </div>
+
+            <h2 id="especialidad">Full Stack Developer Jr</h2>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 descripcion">
+            <span>
+                <h1 class="tituloDesc">Acerca de mí:</h1>
+                <p>{{persona.descripcion}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, maxime autem reiciendis animi ab repudiandae voluptatem incidunt error quod exercitationem ipsam, amet, doloremque est voluptate ullam aut voluptates rem repellat?</p>
+            </span>
+        </div>
+
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 nombre">
-        <h1 id="nombre">{{persona.nombre}} {{persona.apellido}}</h1>
-        <h2 id="especialidad">Full Stack Developer Jr</h2>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 descripcion">
-        <span>
-            <h1 class="tituloDesc">Acerca de mí:</h1>
-            <p>{{persona.descripcion}}</p>
-        </span>
-    </div>
-</div>
