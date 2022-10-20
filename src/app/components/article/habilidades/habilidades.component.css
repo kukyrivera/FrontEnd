@@ -4,16 +4,12 @@
     color: aliceblue;
 }
 
-.row{
+.headerHab{
     border-bottom: 0pt;
     border-left: 0pt;
     border-right: 0pt;
     border-color: aliceblue;
     border-style: inset;
-    padding: 20px;
-}
-
-.headerHab{
     padding: 10px;
 }
 
@@ -21,4 +17,5 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
 }

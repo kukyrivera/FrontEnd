@@ -7,21 +7,25 @@ h1, h2, p{
     margin-right: 25px;
 }
 
-.row{
+.headerExp{
     margin-top: 20px;
     border-bottom: 0pt;
     border-left: 0pt;
     border-right: 0pt;
     border-color: aliceblue;
     border-style: inset;
-}
-
-.headerExp{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 10px;
 }
 
 table{
     border: 0px;
     border-color: black;
+}
+
+.tituloExp{
+    padding-left: 20px;
+}
+
+.edit, .borrar{
+    text-align: right;
 }

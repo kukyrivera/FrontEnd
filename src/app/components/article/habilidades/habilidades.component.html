@@ -1,15 +1,17 @@
-<div class="row">
-    <div class="col-lg-12 headerHab">
+<div class="row headerHab">
+    <div class="col-lg-12">
         <h1 class="titulo">Habilidades</h1>
         <button type="button" title="Agregar" class="btn btn-success" (click)="open(agregarHab)" *ngIf="isLogged">
             <i class="bi bi-plus"></i>
-        </button>
-
-        <ng-template #agregarHab let-modal>
-            <app-new-habilidad></app-new-habilidad>
-        </ng-template>
+        </button> 
     </div>
+</div>
 
+<ng-template #agregarHab let-modal>
+    <app-new-habilidad></app-new-habilidad>
+</ng-template>
+
+<div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 habilidad" *ngFor="let Habilidad of hab">
         <circle-progress
             [showUnits]="true"
@@ -41,3 +43,4 @@
         </div>
     </div>
 </div>
+    
