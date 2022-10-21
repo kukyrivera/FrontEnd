@@ -18,7 +18,7 @@ export class EditProyectoComponent implements OnInit {
     this.sProy.detail(id).subscribe(data =>{
         this.proy = data;
       }, err =>{
-        alert("Error al modificar proyecto");
+        alert("Error al cargar proyecto");
         this.router.navigate(['']);
       }
     )
@@ -28,10 +28,10 @@ export class EditProyectoComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sProy.update(id, this.proy).subscribe(
       data => {
+        alert("Proyecto actualizado con éxito");
         this.router.navigate(['']);
       }, err => {
         alert("Error al modificar proyecto");
-        this.router.navigate(['']);
       }
     )
   }

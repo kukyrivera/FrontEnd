@@ -19,7 +19,7 @@ export class EditAcercaDeComponent implements OnInit {
       data => {
         this.persona = data;
       }, err => {
-        alert("Error al modificar persona");
+        alert("Error al cargar persona");
         this.router.navigate(['']);
       }
     )
@@ -29,10 +29,10 @@ export class EditAcercaDeComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params['id'];
     this.sPersona.update(id, this.persona).subscribe(
       data => {
+        alert("Persona actualizada con éxito");
         this.router.navigate(['']);
       }, err => {
         alert("Error al modificar la persona");
-        this.router.navigate([''])
       }
     )
   }

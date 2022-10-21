@@ -18,7 +18,7 @@ export class EditHabilidadComponent implements OnInit {
     this.sHabilidad.detail(id).subscribe(data =>{
         this.hab = data;
       }, err =>{
-        alert("Error al modificar habilidad");
+        alert("Error al cargar habilidad");
         this.router.navigate(['']);
       }
     )
@@ -28,10 +28,10 @@ export class EditHabilidadComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sHabilidad.update(id, this.hab).subscribe(
       data => {
+        alert("Habilidad actualizada con éxito");
         this.router.navigate(['']);
       }, err => {
         alert("Error al modificar habilidad");
-        this.router.navigate(['']);
       }
     )
   }
