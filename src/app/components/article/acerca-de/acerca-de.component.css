@@ -4,7 +4,7 @@
 #fotoPerfil{
     border-radius: 100%;
 }
-#nombre{
+#nombreP{
     font-weight: bold;
 }
 #especialidad{
@@ -17,7 +17,7 @@
         left: 30px;
         top: -120px;
     }
-    .nombre {
+    .nombrePersona {
         margin-top: 90px;
     }
     .descripcion {
@@ -30,7 +30,7 @@
     .row{
         margin-top: -100px;
     }
-    .nombre {
+    .nombrePersona {
         margin-top: 10px;
     }
     .descripcion {

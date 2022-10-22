@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona';
+import { ImageService } from 'src/app/service/image.service';
 import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { PersonaService } from 'src/app/service/persona.service';
 export class EditAcercaDeComponent implements OnInit {
   persona: Persona = null;
 
-  constructor(private sPersona: PersonaService, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private sPersona: PersonaService, private activatedRoute: ActivatedRoute, private router: Router, public imageService: ImageService) { }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
@@ -27,6 +28,7 @@ export class EditAcercaDeComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRoute.snapshot.params['id'];
+    this.persona.img = this.imageService.url;
     this.sPersona.update(id, this.persona).subscribe(
       data => {
         alert("Persona actualizada con éxito");
@@ -38,7 +40,8 @@ export class EditAcercaDeComponent implements OnInit {
   }
 
   uploadImage($event: any){
-
+    const id = this.activatedRoute.snapshot.params['id'];
+    const name = "profile" + id;
+    this.imageService.uploadImage($event, name);
   }
-
 }

@@ -29,6 +29,9 @@ import { EditHabilidadComponent } from './components/article/habilidades/edit-ha
 import { NewProyectoComponent } from './components/article/proyectos/new-proyecto.component';
 import { EditProyectoComponent } from './components/article/proyectos/edit-proyecto.component';
 import { EditAcercaDeComponent } from './components/article/acerca-de/edit-acerca-de.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -63,7 +66,9 @@ import { EditAcercaDeComponent } from './components/article/acerca-de/edit-acerc
     BrowserModule,
     NgbModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider

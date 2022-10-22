@@ -4,11 +4,11 @@
         </button>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
             <div>
-                <img src="../../../../assets/fotoPerfil.png" id="fotoPerfil" alt="Luciano Rivera">
+                <img src={{persona.img}} id="fotoPerfil" alt="Luciano Rivera">
             </div>
 
-            <div class="nombre">
-                <h1 id="nombre">{{persona.nombre}} {{persona.apellido}}</h1>
+            <div class="nombrePersona">
+                <h1 id="nombreP">{{persona.nombre}} {{persona.apellido}}</h1>
             </div>
 
             <h2 id="especialidad">Full Stack Developer Jr</h2>
@@ -16,7 +16,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 descripcion">
             <span>
                 <h1 class="tituloDesc">Acerca de mí:</h1>
-                <p>{{persona.descripcion}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, maxime autem reiciendis animi ab repudiandae voluptatem incidunt error quod exercitationem ipsam, amet, doloremque est voluptate ullam aut voluptates rem repellat?</p>
+                <p>{{persona.descripcion}}</p>
             </span>
         </div>
 

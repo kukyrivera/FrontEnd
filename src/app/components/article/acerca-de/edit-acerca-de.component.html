@@ -21,6 +21,9 @@
                     <label for="imagen"><h2>Link de la imagen</h2></label>
                     <input type="file" class="form-control" id="imagen" name="imagen" [(ngModel)]="persona.img" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png, .svg, .bmp, .ico">
                 </div>
+                <div class="imagen">
+                    <img [src]="imageService.url" width="200px">
+                </div>
                 <button class="btn btn-primary">
                     Guardar
                 </button>
