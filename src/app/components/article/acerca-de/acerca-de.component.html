@@ -1,7 +1,10 @@
     <div class="row">
-        <button class="btn btn-info" title="Editar" routerLink="/editacercade/1" *ngIf="isLogged">
-            <i class="bi bi-pencil-square">Editar Persona</i>
-        </button>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-9">
+            <button class="btn btn-info" title="Editar" routerLink="/editacercade/1" *ngIf="isLogged">
+                <i class="bi bi-pencil-square">Editar Persona</i>
+            </button>
+        </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
             <div>
                 <img src={{persona.img}} id="fotoPerfil" alt="Luciano Rivera">

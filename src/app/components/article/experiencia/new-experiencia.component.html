@@ -1,18 +1,21 @@
-<div class="container">
+<div class="container wrapper">
     <div class="row">
         <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <form novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombreExp">Nombre de la experiencia</label>
-                    <input type="text" class="form-control" id="nombreExp" name="nombreExp" [(ngModel)]="nombreExp" required>
+                    <input type="text" class="form-control" id="nombreExp" name="nombreExp" placeholder="Nombre de la empresa" [(ngModel)]="nombreExp" required>
                 </div>
                 <div class="form-group">
-                    <label for="descripcionExp">Descripcion de la experiencia</label>
-                    <textarea cols="40" rows="5" class="form-control" id="descripcionExp" name="descripcionExp" [(ngModel)]="descripcionExp" required></textarea>
+                    <textarea cols="40" rows="5" class="form-control" id="descripcionExp" name="descripcionExp" placeholder="Escriba una breve descripción del puesto laboral" [(ngModel)]="descripcionExp" required></textarea>
                 </div>
-                <button class="btn btn-primary">
-                    Agregar Experiencia
-                </button>
+                <div class="botones">
+                    <button class="btn btn-primary" (click)="onCreate()">
+                        Agregar Experiencia
+                    </button>
+                    <button class="btn btn-danger" (click)="cancel()">
+                        Cancelar
+                    </button>
+                </div>
             </form>
         </div>
     </div>

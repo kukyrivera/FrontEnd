@@ -23,13 +23,14 @@ export class NewExperienciaComponent implements OnInit {
     this.sExperiencia.save(exp).subscribe(
       data=>{
         alert("Experiencia creada con éxito");
-        this.router.navigate(['']);
-        this.modalService.dismissAll();
         window.location.reload();
       }, err=>{
         alert("Error al crear la experiencia");
-        this.router.navigate(['']);
       }
     )
+  }
+
+  cancel(){
+    this.modalService.dismissAll();
   }
 }

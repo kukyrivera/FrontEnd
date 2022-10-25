@@ -23,13 +23,14 @@ export class NewProyectoComponent implements OnInit {
     this.sProy.save(proy).subscribe(
       data=>{
         alert("Proyecto creado con éxito");
-        this.router.navigate(['']);
-        this.modalService.dismissAll();
         window.location.reload();
       }, err=>{
         alert("Error al crear el proyecto");
-        this.router.navigate(['']);
       }
     )
+  }
+
+  cancel(){
+    this.modalService.dismissAll();
   }
 }

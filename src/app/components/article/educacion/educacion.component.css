@@ -1,4 +1,4 @@
-h1, h2, p{
+h1, h2, h3, p{
     display: inline;
     color: aliceblue;
 }
@@ -20,6 +20,7 @@ h1, h2, p{
 table{
     border: 0px;
     border-color: black;
+    text-align: center;
 }
 
 .tituloEdu{

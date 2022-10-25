@@ -21,15 +21,16 @@ export class NewHabilidadComponent implements OnInit {
   onCreate(): void {
     const hab = new Habilidad(this.nombreHab, this.porcentajeHab);
     this.sHabilidad.save(hab).subscribe(
-      data=>{
+      data =>{
         alert("Habilidad creada con éxito");
-        this.router.navigate(['']);
-        this.modalService.dismissAll();
         window.location.reload();
-      }, err=>{
-        alert("Error al crear la habilidad");
-        this.router.navigate(['']);
+      }, err =>{
+        alert("Error al crear la habilidad: " + err);
       }
     )
+  }
+
+  cancel(){
+    this.modalService.dismissAll();
   }
 }

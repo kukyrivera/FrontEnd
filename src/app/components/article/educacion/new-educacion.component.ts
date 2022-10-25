@@ -23,13 +23,14 @@ export class NewEducacionComponent implements OnInit {
     this.sEducacion.save(educacion).subscribe(
       data => {
         alert("Educación creada con éxito");
-        this.router.navigate(['']);
-        this.modalService.dismissAll();
         window.location.reload();
       }, err => {
         alert("Error al crear educación");
-        this.router.navigate(['']);
       }
     )
+  }
+
+  cancel(){
+    this.modalService.dismissAll();
   }
 }
