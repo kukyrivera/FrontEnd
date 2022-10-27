@@ -10,9 +10,12 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  exp: Experiencia[] = [];
+
+  expList: Experiencia[] = [];
   title = 'appBootstrap';
   closeResult: string = '';
+  ActivateEditComp:boolean = false;
+  exp: Experiencia;
 
   constructor(private sExperiencia: ExperienciaService, private tokenService: TokenService, private modalService: NgbModal) { }
 
@@ -27,8 +30,18 @@ export class ExperienciaComponent implements OnInit {
     }
   }
 
+  closeClick(){
+    this.ActivateEditComp = false;
+    this.cargarExperiencia();
+  }
+
+  editExp(item:any){
+    this.exp = item;
+    this.ActivateEditComp = true;
+  }
+
   cargarExperiencia(): void {
-    this.sExperiencia.lista().subscribe(data => {this.exp = data;})
+    this.sExperiencia.lista().subscribe(data => {this.expList = data;})
   }
 
   delete(id?: number){

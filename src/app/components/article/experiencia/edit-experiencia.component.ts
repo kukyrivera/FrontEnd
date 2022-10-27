@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/model/experiencia';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 
@@ -9,30 +8,27 @@ import { ExperienciaService } from 'src/app/service/experiencia.service';
   styleUrls: ['./edit-experiencia.component.css']
 })
 export class EditExperienciaComponent implements OnInit {
-  expLab: Experiencia = null;
+  
+  @Input() exp: Experiencia;
 
-  constructor(private sExperiencia: ExperienciaService, private activatedRouter: ActivatedRoute, private router: Router) { }
+  constructor(private sExp: ExperienciaService) { }
 
   ngOnInit(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.sExperiencia.detail(id).subscribe(data =>{
-        this.expLab = data;
-      }, err =>{
-        alert("Error al cargar experiencia");
-        this.router.navigate(['']);
-      }
-    )
+    const id = this.exp.id;
+    this.sExp.detail(id).subscribe(data =>{
+      this.exp = data;
+    }, err => {
+      console.log(err);
+    })
   }
 
-  onUpdate(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.sExperiencia.update(id, this.expLab).subscribe(
-      data => {
-        alert("Experiencia actualizada con éxito");
-        this.router.navigate(['']);
-      }, err => {
-        alert("Error al modificar experiencia");
-      }
-    )
+  updateExp(): void{
+    const id = this.exp.id;
+    this.sExp.update(id, this.exp).subscribe(data =>{
+      alert("Experiencia actualizada con éxito");
+      window.location.reload();
+    }, err => {
+      alert("Error al actualizar experiencia");
+    });
   }
 }
