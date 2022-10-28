@@ -10,22 +10,33 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  educacion: Educacion[] = [];
+  eduList: Educacion[] = [];
   title = 'appBootstrap';
   closeResult: string = '';
+  ActivateEditComp:boolean = false;
+  edu: Educacion;
 
-  constructor(private sEducacion: EducacionService, private tokenService: TokenService, private modalService: NgbModal) { }
+  constructor(private sEdu: EducacionService, private tokenService: TokenService, private modalService: NgbModal) { }
 
   isLogged = false;
 
   ngOnInit(): void {
     this.cargarEducacion();
-
     if(this.tokenService.getToken()){
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
+  }
+
+  closeClick(){
+    this.ActivateEditComp = false;
+    this.cargarEducacion();
+  }
+
+  editEdu(item:any){
+    this.edu = item;
+    this.ActivateEditComp = true;
   }
 
   open(content:any) {
@@ -47,16 +58,16 @@ export class EducacionComponent implements OnInit {
   }
 
   cargarEducacion(): void {
-    this.sEducacion.lista().subscribe(
+    this.sEdu.lista().subscribe(
       data => {
-        this.educacion = data;
+        this.eduList = data;
       }
     )
   }
 
   delete(id?: number){
     if(id != undefined){
-      this.sEducacion.delete(id).subscribe(
+      this.sEdu.delete(id).subscribe(
         data => {
           this.cargarEducacion();
         }, err => {

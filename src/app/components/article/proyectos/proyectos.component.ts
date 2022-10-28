@@ -10,9 +10,11 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-  proy: Proyecto[] = [];
+  proyList: Proyecto[] = [];
   title = 'appBootstrap';
   closeResult: string = '';
+  ActivateEditComp:boolean = false;
+  proy: Proyecto;
 
   constructor(private sProy: ProyectoService, private tokenService: TokenService, private modalService: NgbModal) { }
 
@@ -27,8 +29,20 @@ export class ProyectosComponent implements OnInit {
     }
   }
 
+  closeClick(){
+    this.ActivateEditComp = false;
+    this.cargarProyecto();
+  }
+
+  editProy(item:any){
+    this.proy = item;
+    this.ActivateEditComp = true;
+  }
+
   cargarProyecto(): void {
-    this.sProy.lista().subscribe(data => {this.proy = data;})
+    this.sProy.lista().subscribe(data => {
+      this.proyList = data;
+    });
   }
 
   delete(id?: number){
@@ -60,5 +74,4 @@ export class ProyectosComponent implements OnInit {
       return  `with: ${reason}`;
     }
   }
-
 }

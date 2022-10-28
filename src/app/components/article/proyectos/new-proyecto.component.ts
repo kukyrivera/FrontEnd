@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectoService } from 'src/app/service/proyecto.service';
@@ -13,7 +12,7 @@ export class NewProyectoComponent implements OnInit {
   nombreProy: string = '';
   descripcionProy: string = '';
 
-  constructor(private sProy: ProyectoService, private router: Router, private modalService: NgbModal) { }
+  constructor(private sProy: ProyectoService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }

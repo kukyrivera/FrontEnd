@@ -1,16 +1,25 @@
 <div class="container wrapper">
     <div class="row">
-        <div>
+        <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel">Crear nueva experiencia profesional</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="cancel()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
             <form novalidate #f="ngForm">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="nombreExp" name="nombreExp" placeholder="Nombre de la empresa" [(ngModel)]="nombreExp" required>
+                    <input type="text" class="form-control" id="nombreExp" name="nombreExp"
+                        placeholder="Nombre de la empresa" [(ngModel)]="nombreExp" required>
                 </div>
                 <div class="form-group">
-                    <textarea cols="40" rows="5" class="form-control" id="descripcionExp" name="descripcionExp" placeholder="Escriba una breve descripción del puesto laboral" [(ngModel)]="descripcionExp" required></textarea>
+                    <textarea cols="40" rows="5" class="form-control" id="descripcionExp" name="descripcionExp"
+                        placeholder="Escriba una breve descripción del puesto laboral" [(ngModel)]="descripcionExp"
+                        required></textarea>
                 </div>
                 <div class="botones">
                     <button class="btn btn-primary" (click)="onCreate()">
-                        Agregar Experiencia
+                        Agregar experiencia
                     </button>
                     <button class="btn btn-danger" (click)="cancel()">
                         Cancelar

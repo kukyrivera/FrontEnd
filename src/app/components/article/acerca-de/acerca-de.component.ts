@@ -10,7 +10,8 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class AcercaDeComponent implements OnInit {
   
-  persona: Persona= null;
+  persona: Persona;
+  ActivateEditComp:boolean = false;
 
   constructor(public personaService: PersonaService, public tokenService: TokenService) { }
 
@@ -25,7 +26,19 @@ export class AcercaDeComponent implements OnInit {
     }
   }
 
+  closeClick(){
+    this.ActivateEditComp = false;
+    this.cargarPersona();
+  }
+
+  editPersona(item:any){
+    this.persona = item;
+    this.ActivateEditComp = true;
+  }
+
   cargarPersona(): void {
-    this.personaService.detail(1).subscribe(data => {this.persona = data;})
+    this.personaService.detail(1).subscribe(data => {
+      this.persona = data;
+    });
   }
 }

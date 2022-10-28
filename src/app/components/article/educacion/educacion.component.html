@@ -15,19 +15,38 @@
     <div class="col-lg-12">
         <table class="table">
             <tbody>
-                <tr *ngFor="let Educacion of educacion">
+                <tr *ngFor="let Educacion of eduList">
                     <td class="tituloEdu">
                         <h2>{{Educacion.nombreEd}}</h2>
                     </td>
                     <td>
                         <h3>{{Educacion.descripcionEd}}</h3>
                     </td>
-                    <td class="edit" *ngIf="isLogged">
-                        <button class="btn btn-info" title="Editar" routerLink="/editedu/{{Educacion.id}}">
+                    <td class="btnsEditBorrar" *ngIf="isLogged">
+                        <button type="button" class="btn btn-info" title="Editar" data-toggle="modal"
+                            data-target="#modalEditEdu" (click)="editEdu(Educacion)">
                             <i class="bi bi-pencil-square"></i>
                         </button>
-                    </td>
-                    <td class="borrar" *ngIf="isLogged">
+
+                        <div class="modal fade" id="modalEditEdu" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title text-center headerEdit" id="exampleModalLabel">Editar
+                                            Educación</h2>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                            (click)="closeClick()">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <app-edit-educacion [edu]="edu" *ngIf="ActivateEditComp">
+                                        </app-edit-educacion>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <button class="btn btn-danger" title="Borrar" (click)="delete(Educacion.id)">
                             <i class="bi bi-trash"></i>
                         </button>

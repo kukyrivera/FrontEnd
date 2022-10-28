@@ -17,11 +17,6 @@ h1, h2, h3, p{
     padding: 10px;
 }
 
-.headerProy{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 table, td{
     border: 0px none black;
     text-align: center;
@@ -31,12 +26,21 @@ table, td{
     padding-left: 20px;
 }
 
-.edit, .borrar{
+.btnsEditBorrar{
     text-align: right;
 }
 
+.btnsEditBorrar button{
+    margin: 5px;
+}
+
+.headerEdit{
+    color: black;
+    font-weight: bold;
+}
+
 @media (max-width: 767px){
-    .edit, .borrar{
+    button{
         display: block;
     }
 }

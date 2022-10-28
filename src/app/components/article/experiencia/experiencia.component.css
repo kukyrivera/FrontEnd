@@ -26,12 +26,21 @@ table, td{
     padding-left: 20px;
 }
 
-.edit, .borrar{
+.btnsEditBorrar{
     text-align: right;
 }
 
+.btnsEditBorrar button{
+    margin: 5px;
+}
+
+.headerEdit{
+    color: black;
+    font-weight: bold;
+}
+
 @media (max-width: 767px){
-    .edit, .borrar{
+    button{
         display: block;
     }
 }

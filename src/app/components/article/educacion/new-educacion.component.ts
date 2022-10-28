@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
@@ -13,7 +12,7 @@ export class NewEducacionComponent implements OnInit {
   nombreEd: string;
   descripcionEd: string;
 
-  constructor(private sEducacion: EducacionService, private router: Router, private modalService: NgbModal) { }
+  constructor(private sEducacion: EducacionService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }

@@ -1,16 +1,25 @@
 <div class="container wrapper">
     <div class="row">
-        <div>
+        <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel">Crear nueva educación</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="cancel()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
             <form novalidate #f="ngForm">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="nombreEd" name="nombreEd" placeholder="Nombre de la institución" [(ngModel)]="nombreEd" required>
+                    <input type="text" class="form-control" id="nombreEdu" name="nombreEdu"
+                        placeholder="Nombre de la institución" [(ngModel)]="nombreEd" required>
                 </div>
                 <div class="form-group">
-                    <textarea cols="40" rows="5" class="form-control" id="descripcionEd" name="descripcionEd" placeholder="Escriba una breve descripción de la educación" [(ngModel)]="descripcionEd" required></textarea>
+                    <textarea cols="40" rows="5" class="form-control" id="descripcionEdu" name="descripcionEdu"
+                        placeholder="Escriba una breve descripción de la educación" [(ngModel)]="descripcionEd"
+                        required></textarea>
                 </div>
                 <div class="botones">
                     <button class="btn btn-primary" (click)="onCreate()">
-                        Agregar Educación
+                        Agregar educación
                     </button>
                     <button class="btn btn-danger" (click)="cancel()">
                         Cancelar
