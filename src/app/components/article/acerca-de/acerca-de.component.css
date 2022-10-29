@@ -25,13 +25,12 @@
 
 @media (min-width: 992px) {
     #fotoPerfil {
-        position: absolute;
-        left: 30px;
-        top: -120px;
+        width: 220px;
+        margin-top: -150px;
     }
 
     .nombrePersona {
-        margin-top: 90px;
+        margin-top: 20px;
     }
 
     .descripcion {
@@ -41,6 +40,11 @@
 }
 
 @media (max-width: 991px) {
+    #fotoPerfil {
+        width: 220px;
+        margin-top: -50px;
+    }
+
     .row {
         margin-top: -100px;
     }

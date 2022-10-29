@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf="persona">
     <div class="btnEdit" *ngIf="isLogged">
         <button class="btn btn-info" title="Editar" data-toggle="modal" data-target="#modalEditPersona"
             (click)="editPersona(persona)">
