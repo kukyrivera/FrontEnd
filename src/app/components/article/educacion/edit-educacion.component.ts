@@ -40,7 +40,7 @@ export class EditEducacionComponent implements OnInit {
             if (this.edu.descripcionEd.length > 255) {
               alert("La descripción es muy larga");
             } else {
-              alert("Error al actualizar educación: Puede que ese nombre o descripción ya existan en la base de datos");
+              alert("Error al actualizar educación: Puede que ese nombre o descripción ya existan en la base de datos o haya datos incorrectos");
             }
     });
   }

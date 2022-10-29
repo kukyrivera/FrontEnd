@@ -13,15 +13,15 @@ export class PersonaService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public lista(): Observable<Persona[]>{
+  public lista(): Observable<Persona[]> {
     return this.httpClient.get<Persona[]>(this.URL + 'lista');
   }
 
-  public detail(id: number): Observable<Persona>{
+  public detail(id: number): Observable<Persona> {
     return this.httpClient.get<Persona>(this.URL + `detail/${id}`);
   }
 
-  public update(id: number, persona: Persona): Observable<any>{
+  public update(id: number, persona: Persona): Observable<any> {
     return this.httpClient.put<any>(this.URL + `update/${id}`, persona);
   }
 }

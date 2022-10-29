@@ -20,16 +20,29 @@ export class NewExperienciaComponent implements OnInit {
   onCreate(): void {
     const exp = new Experiencia(this.nombreExp, this.descripcionExp);
     this.sExperiencia.save(exp).subscribe(
-      data=>{
+      data => {
         alert("Experiencia creada con éxito");
         window.location.reload();
-      }, err=>{
-        alert("Error al crear la experiencia");
-      }
-    )
+      }, err => {
+        if (this.nombreExp == "") {
+          alert("El nombre es obligatorio");
+        } else
+          if (this.descripcionExp == "") {
+            alert("La descripción es obligatoria");
+          } else
+            if (this.nombreExp.length > 255) {
+              alert("El nombre es muy largo");
+            } else
+              if (this.descripcionExp.length > 255) {
+                alert("La descripción es muy larga");
+              } else {
+                alert("Error al crear experiencia: Puede que ese nombre o descripción ya existan en la base de datos o haya datos incorrectos");
+              }
+            }
+    );
   }
 
-  cancel(){
+  cancel() {
     this.modalService.dismissAll();
   }
 }

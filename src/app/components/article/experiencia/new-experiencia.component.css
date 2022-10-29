@@ -1,35 +1,36 @@
 .wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column; 
-    justify-content: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 20px;
-  }
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
 
-.modal-header{
+.modal-header {
   display: inline-flex;
 }
 
-  .modal-title{
-    font-weight: bold;
-  }
+.modal-title {
+  font-weight: bold;
+}
 
-input[type=text], textarea {
-    background-color: #f6f6f6;
-    color: #0d0d0d;
-    text-align: center;
-    font-size: 16px;
-    margin: 5px;
-    width: 100%;
-    border: 1px solid #000000;
-  }
+input[type=text],
+textarea {
+  background-color: #f6f6f6;
+  color: #0d0d0d;
+  text-align: center;
+  font-size: 16px;
+  margin: 5px;
+  width: 100%;
+  border: 1px solid #000000;
+}
 
-  .botones{
-    text-align: center;
-  }
+.botones {
+  text-align: center;
+}
 
-  .botones button{
-    margin: 10px;
-  }
+.botones button {
+  margin: 10px;
+}

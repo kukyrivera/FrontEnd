@@ -40,7 +40,7 @@ export class EditExperienciaComponent implements OnInit {
             if (this.exp.descripcionExp.length > 255) {
               alert("La descripción es muy larga");
             } else {
-              alert("Error al actualizar experiencia: Puede que ese nombre o descripción ya existan en la base de datos");
+              alert("Error al actualizar experiencia: Puede que ese nombre o descripción ya existan en la base de datos o haya datos incorrectos");
             }
     });
   }

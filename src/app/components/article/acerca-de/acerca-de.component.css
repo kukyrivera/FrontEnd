@@ -1,58 +1,67 @@
-.row{
+.row {
     text-align: center;
 }
-#fotoPerfil{
+
+#fotoPerfil {
     border-radius: 100%;
 }
-#nombreP{
+
+#nombreP {
     font-weight: bold;
 }
-#especialidad{
+
+#especialidad {
     font-style: italic;
 }
-.btnEdit{
+
+.btnEdit {
     text-align: right;
 }
 
-.headerEdit{
+.headerEdit {
     color: black;
     font-weight: bold;
 }
 
-@media (min-width: 992px){
-    #fotoPerfil{
+@media (min-width: 992px) {
+    #fotoPerfil {
         position: absolute;
         left: 30px;
         top: -120px;
     }
+
     .nombrePersona {
         margin-top: 90px;
     }
+
     .descripcion {
         padding: 20px;
         padding-left: 40px;
     }
 }
 
-@media (max-width: 991px){
-    .row{
+@media (max-width: 991px) {
+    .row {
         margin-top: -100px;
     }
+
     .nombrePersona {
         margin-top: 10px;
     }
+
     .descripcion {
         margin-top: 30px;
         padding: 10px;
     }
-    .btnEdit{
+
+    .btnEdit {
         position: relative;
         top: 110px;
     }
 }
 
-@media (max-width: 305px){
-    #fotoPerfil{
+@media (max-width: 305px) {
+    #fotoPerfil {
         width: 150px;
     }
 }

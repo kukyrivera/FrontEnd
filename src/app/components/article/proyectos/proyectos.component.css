@@ -1,46 +1,63 @@
-h1, h2, h3, p{
+h2,
+h3,
+p {
     display: inline;
     color: aliceblue;
 }
 
-.titulo{
+.titulo {
     margin-right: 25px;
 }
 
-.headerProy{
+.headerProy {
     margin-top: 20px;
-    border-bottom: 0pt;
-    border-left: 0pt;
-    border-right: 0pt;
-    border-color: aliceblue;
-    border-style: inset;
     padding: 10px;
 }
 
-table, td{
+.headerProy img {
+    margin-inline-end: 20px;
+    width: 350px;
+}
+
+table,
+td {
     border: 0px none black;
     text-align: center;
 }
 
-.tituloProy{
+.tituloProy {
     padding-left: 20px;
 }
 
-.btnsEditBorrar{
+.btnsEditBorrar {
     text-align: right;
 }
 
-.btnsEditBorrar button{
+.btnsEditBorrar button {
     margin: 5px;
 }
 
-.headerEdit{
+.headerEdit {
     color: black;
     font-weight: bold;
 }
 
-@media (max-width: 767px){
-    button{
+@media (max-width: 767px) {
+    .table button {
         display: block;
+    }
+}
+
+@media (max-width: 431px) {
+    .headerProy img {
+        margin-inline-end: 5px;
+        width: 250px;
+    }
+}
+
+@media (max-width: 316px) {
+    .headerProy img {
+        margin-inline-end: 5px;
+        width: 200px;
     }
 }

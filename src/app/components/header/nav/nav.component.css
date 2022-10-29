@@ -1,42 +1,42 @@
-.row{
+.row {
     align-items: center;
     background-color: rgb(40, 125, 153);
 }
 
-.logoAP img{
+.logoAP img {
     width: 100px;
 }
 
-button{
+button {
     margin-left: 20px;
 }
 
-.redes{
+.redes {
     text-align: right;
 }
 
-.redes img{
+.redes img {
     width: 30px;
     margin: 3px;
 }
 
-@media (max-width: 575px){
-    .logoAP{
+@media (max-width: 575px) {
+    .logoAP {
         text-align: center;
     }
 
-    .redes{
+    .redes {
         text-align: center;
         margin-bottom: 5px;
     }
 
-    .redes img{
+    .redes img {
         margin-bottom: 7px;
     }
 }
 
-@media (max-width: 320px){
-    button{
+@media (max-width: 320px) {
+    button {
         width: 180px;
     }
 }

@@ -9,8 +9,10 @@
 
         <!-- Login Form -->
         <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
-            <input type="text" id="nombreUsuario" class="fadeIn second form-control form-control-lg" name="nombreUsuario" placeholder="Usuario" [(ngModel)]="nombreUsuario" required>
-            <input type="password" id="password" class="fadeIn third form-control form-control-lg" name="password" placeholder="Contraseña" [(ngModel)]="password" required>
+            <input type="text" id="nombreUsuario" class="fadeIn second form-control form-control-lg"
+                name="nombreUsuario" placeholder="Usuario" [(ngModel)]="nombreUsuario" required>
+            <input type="password" id="password" class="fadeIn third form-control form-control-lg" name="password"
+                placeholder="Contraseña" [(ngModel)]="password" required>
             <input type="submit" class="fadeIn fourth logear" value="Ingresar">
         </form>
     </div>

@@ -12,23 +12,23 @@ export class HabilidadService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public lista(): Observable<Habilidad[]>{
+  public lista(): Observable<Habilidad[]> {
     return this.httpClient.get<Habilidad[]>(this.URL + 'lista');
   }
 
-  public detail(id: number): Observable<Habilidad>{
+  public detail(id: number): Observable<Habilidad> {
     return this.httpClient.get<Habilidad>(this.URL + `detail/${id}`);
   }
 
-  public save(habilidad: Habilidad): Observable<any>{
+  public save(habilidad: Habilidad): Observable<any> {
     return this.httpClient.post<any>(this.URL + 'create', habilidad);
   }
 
-  public update(id: number, habilidad: Habilidad): Observable<any>{
+  public update(id: number, habilidad: Habilidad): Observable<any> {
     return this.httpClient.put<any>(this.URL + `update/${id}`, habilidad);
   }
 
-  public delete(id: number): Observable<any>{
+  public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.URL + `delete/${id}`);
   }
 }

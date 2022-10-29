@@ -3,7 +3,7 @@ export class Proyecto {
     nombreProy: string;
     descripcionProy: string;
 
-    constructor(nombreProy: string, descripcionProy: string){
+    constructor(nombreProy: string, descripcionProy: string) {
         this.nombreProy = nombreProy;
         this.descripcionProy = descripcionProy;
     }

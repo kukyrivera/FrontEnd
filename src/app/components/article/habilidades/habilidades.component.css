@@ -1,21 +1,44 @@
-.titulo{
+.titulo {
     margin-right: 25px;
     display: inline;
     color: aliceblue;
 }
 
-.headerHab{
-    border-bottom: 0pt;
-    border-left: 0pt;
-    border-right: 0pt;
-    border-color: aliceblue;
-    border-style: inset;
+.headerHab {
     padding: 10px;
 }
 
-.habil{
+.headerHab img {
+    margin-inline-end: 20px;
+    width: 350px;
+}
+
+.habil {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
+}
+
+.headerEdit {
+    color: black;
+    font-weight: bold;
+}
+
+.btns .btnEdit {
+    margin-inline-end: 10px;
+}
+
+@media (max-width: 431px) {
+    .headerHab img {
+        margin-inline-end: 5px;
+        width: 250px;
+    }
+}
+
+@media (max-width: 316px) {
+    .headerHab img {
+        margin-inline-end: 5px;
+        width: 200px;
+    }
 }

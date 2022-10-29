@@ -20,16 +20,29 @@ export class NewProyectoComponent implements OnInit {
   onCreate(): void {
     const proy = new Proyecto(this.nombreProy, this.descripcionProy);
     this.sProy.save(proy).subscribe(
-      data=>{
+      data => {
         alert("Proyecto creado con éxito");
         window.location.reload();
-      }, err=>{
-        alert("Error al crear el proyecto");
+      }, err => {
+        if (this.nombreProy == "") {
+          alert("El nombre es obligatorio");
+        } else
+          if (this.descripcionProy == "") {
+            alert("La descripción es obligatoria");
+          } else
+            if (this.nombreProy.length > 255) {
+              alert("El nombre es muy largo");
+            } else
+              if (this.descripcionProy.length > 255) {
+                alert("La descripción es muy larga");
+              } else {
+                alert("Error al crear proyecto: Puede que ese nombre o descripción ya existan en la base de datos o haya datos incorrectos");
+              }
       }
-    )
+    );
   }
 
-  cancel(){
+  cancel() {
     this.modalService.dismissAll();
   }
 }

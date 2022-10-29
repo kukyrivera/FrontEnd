@@ -9,7 +9,7 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
   styleUrls: ['./edit-proyecto.component.css']
 })
 export class EditProyectoComponent implements OnInit {
-  
+
   @Input() proy: Proyecto;
 
   constructor(private sProy: ProyectoService, private activatedRouter: ActivatedRoute, private router: Router) { }
@@ -41,7 +41,7 @@ export class EditProyectoComponent implements OnInit {
             if (this.proy.descripcionProy.length > 255) {
               alert("La descripción es muy larga");
             } else {
-              alert("Error al actualizar proyecto: Puede que ese nombre o descripción ya existan en la base de datos");
+              alert("Error al actualizar proyecto: Puede que ese nombre o descripción ya existan en la base de datos o haya datos incorrectos");
             }
     });
   }

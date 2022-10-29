@@ -13,7 +13,7 @@ import { NavComponent } from './components/header/nav/nav.component';
 import { ProyectosComponent } from './components/article/proyectos/proyectos.component';
 import { ArticleComponent } from './components/article/article.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,9 +29,9 @@ import { EditHabilidadComponent } from './components/article/habilidades/edit-ha
 import { NewProyectoComponent } from './components/article/proyectos/new-proyecto.component';
 import { EditProyectoComponent } from './components/article/proyectos/edit-proyecto.component';
 import { EditAcercaDeComponent } from './components/article/acerca-de/edit-acerca-de.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideStorage,getStorage } from '@angular/fire/storage';
+import { provideStorage, getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [

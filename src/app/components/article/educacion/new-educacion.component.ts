@@ -24,12 +24,25 @@ export class NewEducacionComponent implements OnInit {
         alert("Educación creada con éxito");
         window.location.reload();
       }, err => {
-        alert("Error al crear educación");
+        if (this.nombreEd == "") {
+          alert("El nombre es obligatorio");
+        } else
+          if (this.descripcionEd == "") {
+            alert("La descripción es obligatoria");
+          } else
+            if (this.nombreEd.length > 255) {
+              alert("El nombre es muy largo");
+            } else
+              if (this.descripcionEd.length > 255) {
+                alert("La descripción es muy larga");
+              } else {
+                alert("Error al crear educación: Puede que ese nombre o descripción ya existan en la base de datos o haya datos incorrectos");
+              }
       }
-    )
+    );
   }
 
-  cancel(){
+  cancel() {
     this.modalService.dismissAll();
   }
 }

@@ -1,6 +1,6 @@
 <div class="row headerExp">
     <div class="col-lg-12">
-        <h1 class="titulo">Experiencia Profesional</h1>
+        <img src="../../../../assets/tituloexp.png" alt="Experiencia profesional">
         <button type="button" title="Agregar" class="btn btn-success" (click)="open(agregarExp)" *ngIf="isLogged">
             <i class="bi bi-plus"></i>
         </button>
@@ -24,10 +24,11 @@
                     </td>
                     <td class="btnsEditBorrar" *ngIf="isLogged">
                         <button type="button" class="btn btn-info" title="Editar" data-toggle="modal"
-                            data-target="#exampleModal" (click)="editExp(Experiencia)">
+                            data-target="#modalEditExp" (click)="editExp(Experiencia)">
                             <i class="bi bi-pencil-square"></i>
                         </button>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+
+                        <div class="modal fade" id="modalEditExp" tabindex="-1" role="dialog"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -46,7 +47,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <button class="btn btn-danger" title="Borrar" (click)="delete(Experiencia.id)">
                             <i class="bi bi-trash"></i>
                         </button>

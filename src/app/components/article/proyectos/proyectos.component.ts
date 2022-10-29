@@ -13,7 +13,7 @@ export class ProyectosComponent implements OnInit {
   proyList: Proyecto[] = [];
   title = 'appBootstrap';
   closeResult: string = '';
-  ActivateEditComp:boolean = false;
+  ActivateEditComp: boolean = false;
   proy: Proyecto;
 
   constructor(private sProy: ProyectoService, private tokenService: TokenService, private modalService: NgbModal) { }
@@ -22,19 +22,19 @@ export class ProyectosComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarProyecto();
-    if(this.tokenService.getToken()){
+    if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
   }
 
-  closeClick(){
+  closeClick() {
     this.ActivateEditComp = false;
     this.cargarProyecto();
   }
 
-  editProy(item:any){
+  editProy(item: any) {
     this.proy = item;
     this.ActivateEditComp = true;
   }
@@ -45,33 +45,34 @@ export class ProyectosComponent implements OnInit {
     });
   }
 
-  delete(id?: number){
-    if(id != undefined){
+  delete(id?: number) {
+    if (id != undefined) {
       this.sProy.delete(id).subscribe(
         data => {
           this.cargarProyecto();
         }, err => {
           alert("Error al borrar el proyecto");
+          window.location.reload();
         }
       )
     }
   }
 
-  open(content:any) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+  open(content: any) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
-  } 
-  
+  }
+
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
       return 'by clicking on a backdrop';
     } else {
-      return  `with: ${reason}`;
+      return `with: ${reason}`;
     }
   }
 }

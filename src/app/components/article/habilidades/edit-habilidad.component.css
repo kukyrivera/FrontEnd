@@ -1,0 +1,16 @@
+.nombreHab {
+    background-color: #f6f6f6;
+    color: #0d0d0d;
+    font-size: 16px;
+    margin: 5px;
+    width: 100%;
+    border: 1px solid #000000;
+}
+
+#nombreHab {
+    text-align: center;
+}
+
+.porcentaje {
+    color: black;
+}

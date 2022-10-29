@@ -1,22 +1,23 @@
 .wrapper {
   display: flex;
   align-items: center;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   min-height: 100%;
   padding: 20px;
 }
 
-.modal-header{
-display: inline-flex;
+.modal-header {
+  display: inline-flex;
 }
 
-.modal-title{
+.modal-title {
   font-weight: bold;
 }
 
-input[type=text], textarea {
+input[type=text],
+textarea {
   background-color: #f6f6f6;
   color: #0d0d0d;
   text-align: center;
@@ -26,10 +27,10 @@ input[type=text], textarea {
   border: 1px solid #000000;
 }
 
-.botones{
+.botones {
   text-align: center;
 }
 
-.botones button{
+.botones button {
   margin: 10px;
 }

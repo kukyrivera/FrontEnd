@@ -9,9 +9,9 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-  
+
   persona: Persona;
-  ActivateEditComp:boolean = false;
+  ActivateEditComp: boolean = false;
 
   constructor(public personaService: PersonaService, public tokenService: TokenService) { }
 
@@ -19,19 +19,19 @@ export class AcercaDeComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarPersona();
-    if(this.tokenService.getToken()){
+    if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
   }
 
-  closeClick(){
+  closeClick() {
     this.ActivateEditComp = false;
     this.cargarPersona();
   }
 
-  editPersona(item:any){
+  editPersona(item: any) {
     this.persona = item;
     this.ActivateEditComp = true;
   }

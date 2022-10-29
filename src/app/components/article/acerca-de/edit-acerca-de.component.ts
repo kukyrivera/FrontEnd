@@ -56,7 +56,7 @@ export class EditAcercaDeComponent implements OnInit {
                     if (this.persona.descripcion.length > 255) {
                       alert("La descripción es muy larga");
                     } else {
-                      alert("Error al actualizar persona: Puede que esa persona ya existan en la base de datos");
+                      alert("Error al actualizar persona: Puede que esa persona ya exista en la base de datos o haya datos incorrectos");
                     }
     });
   }

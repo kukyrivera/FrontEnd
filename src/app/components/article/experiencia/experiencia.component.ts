@@ -14,7 +14,7 @@ export class ExperienciaComponent implements OnInit {
   expList: Experiencia[] = [];
   title = 'appBootstrap';
   closeResult: string = '';
-  ActivateEditComp:boolean = false;
+  ActivateEditComp: boolean = false;
   exp: Experiencia;
 
   constructor(private sExperiencia: ExperienciaService, private tokenService: TokenService, private modalService: NgbModal) { }
@@ -23,19 +23,19 @@ export class ExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarExperiencia();
-    if(this.tokenService.getToken()){
+    if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
   }
 
-  closeClick(){
+  closeClick() {
     this.ActivateEditComp = false;
     this.cargarExperiencia();
   }
 
-  editExp(item:any){
+  editExp(item: any) {
     this.exp = item;
     this.ActivateEditComp = true;
   }
@@ -46,33 +46,34 @@ export class ExperienciaComponent implements OnInit {
     })
   }
 
-  delete(id?: number){
-    if(id != undefined){
+  delete(id?: number) {
+    if (id != undefined) {
       this.sExperiencia.delete(id).subscribe(
         data => {
           this.cargarExperiencia();
         }, err => {
           alert("Error al borrar la experiencia");
+          window.location.reload();
         }
       )
     }
   }
 
-  open(content:any) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+  open(content: any) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
-  } 
-  
+  }
+
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
       return 'by clicking on a backdrop';
     } else {
-      return  `with: ${reason}`;
+      return `with: ${reason}`;
     }
   }
 }

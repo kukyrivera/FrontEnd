@@ -12,23 +12,23 @@ export class ProyectoService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public lista(): Observable<Proyecto[]>{
+  public lista(): Observable<Proyecto[]> {
     return this.httpClient.get<Proyecto[]>(this.URL + 'lista');
   }
 
-  public detail(id: number): Observable<Proyecto>{
+  public detail(id: number): Observable<Proyecto> {
     return this.httpClient.get<Proyecto>(this.URL + `detail/${id}`);
   }
 
-  public save(proyecto: Proyecto): Observable<any>{
+  public save(proyecto: Proyecto): Observable<any> {
     return this.httpClient.post<any>(this.URL + `create`, proyecto);
   }
 
-  public update(id: number, proyecto: Proyecto): Observable<any>{
+  public update(id: number, proyecto: Proyecto): Observable<any> {
     return this.httpClient.put<any>(this.URL + `update/${id}`, proyecto);
   }
 
-  public delete(id: number): Observable<any>{
+  public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.URL + `delete/${id}`);
   }
 }
