@@ -54,7 +54,8 @@
     }
 
     .row {
-        margin-top: -100px;
+        display: flex;
+        flex-direction: column;
     }
 
     .nombrePersona {
@@ -67,8 +68,7 @@
     }
 
     .btnEdit {
-        position: relative;
-        top: 110px;
+        margin-right: 15px;
     }
 }
 

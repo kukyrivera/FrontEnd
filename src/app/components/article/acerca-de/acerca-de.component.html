@@ -1,30 +1,30 @@
-<div class="row" *ngIf="persona">
-    <div class="btnEdit" *ngIf="isLogged">
-        <button class="btn btn-info" title="Editar" data-toggle="modal" data-target="#modalEditPersona"
-            (click)="editPersona(persona)">
-            <i class="bi bi-pencil-square"></i>
-        </button>
-    </div>
-    <div class="modal fade" id="modalEditPersona" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title text-center headerEdit" id="exampleModalLabel">Editar
-                        Persona</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeClick()">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <app-edit-acerca-de [persona]="persona" *ngIf="ActivateEditComp">
-                    </app-edit-acerca-de>
-                </div>
+<div class="btnEdit" *ngIf="isLogged">
+    <button class="btn btn-info" title="Editar" data-toggle="modal" data-target="#modalEditPersona"
+        (click)="editPersona(persona)">
+        <i class="bi bi-pencil-square"></i>
+    </button>
+</div>
+
+<div class="modal fade" id="modalEditPersona" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title text-center headerEdit" id="exampleModalLabel">Editar
+                    Persona</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeClick()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <app-edit-acerca-de [persona]="persona" *ngIf="ActivateEditComp">
+                </app-edit-acerca-de>
             </div>
         </div>
     </div>
+</div>
 
-
+<div class="row" *ngIf="persona">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
         <div>
             <img src={{persona.img}} id="fotoPerfil" alt="Luciano Rivera">
