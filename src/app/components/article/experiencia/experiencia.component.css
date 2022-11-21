@@ -25,6 +25,14 @@ td {
     text-align: center;
 }
 
+.exp{
+    height: 80pt;
+}
+
+tr {
+    margin-bottom: 20px;
+}
+
 .tituloExp {
     padding-left: 20px;
 }
